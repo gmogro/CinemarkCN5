@@ -1,2 +1,3 @@
 class BaseDato:
-    pass
+    def __init__(self,nombre):
+        self.__nombre = nombre
