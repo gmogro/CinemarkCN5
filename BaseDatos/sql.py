@@ -1,9 +1,9 @@
-#EN ESTA clase TRABAJAREMOS TODO LO QUE es CONSULTAs CON LA BASES DE DATOS
 import sqlite3
-class  DataBase:
-    def __init__(self, name):
-        self.name = name
-        self.connection = sqlite3.connect(self.name)
+class BaseDato:
+    
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.connection = sqlite3.connect(self.nombre)
         self.cursor = self.connection.cursor()
     
     def create_table(self, table_name, columns):
