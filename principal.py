@@ -1,4 +1,4 @@
-from Proyecto.pelicula import Pelicula
+from Proyecto.Reserva.pelicula import Pelicula
 from datetime import datetime,date
 
 print("###########")
