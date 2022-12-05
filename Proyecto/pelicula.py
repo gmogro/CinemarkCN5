@@ -42,5 +42,9 @@ class Pelicula:
     def delete_pelicula(self,id):
         cnn = sql.BaseDato("cinemar.db")
         cnn.update("pelicula","estado",0,f"id_pelicula = {id}")
-        
-        
+    
+    
+    def peliculas_destacadas():
+        pass
+    
+    

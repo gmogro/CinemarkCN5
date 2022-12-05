@@ -1,4 +1,5 @@
 import sqlite3
+
 class BaseDato:
     
     def __init__(self, nombre):
