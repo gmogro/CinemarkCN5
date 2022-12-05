@@ -1,6 +1,8 @@
 from BaseDatos import sql
 
+
 class Rol:
+    
     def __init__(self, id = 0, nombre = "", descripcion = ""):
         self.__id = id
         self.__nombre = nombre
@@ -36,12 +38,12 @@ class Rol:
     def create_rol(self):
         nombre = input("Nombre: ")
         descripcion = input("Descripcion: ")
-        db = sql.BaseDato('cinemar.db')
+        db = sql.DataBase('cinemar.db')
         db.insert("rol","nombre,descripcion",f"'{nombre}','{descripcion}'")
         db.close()
 
     def update_rol(self,id_rol):
-        db = sql.BaseDato("cinemar.db")
+        db = sql.DataBase("cinemar.db")
         print("Si no desea Modificar el Dato Solo Presione Enter")
         print("Hasta llegar al Dato que quiere modificar")
         rol = db.select("rol","id_rol,nombre,descripcion",f"id_rol = {id_rol}")
@@ -52,12 +54,12 @@ class Rol:
         db.close()
 
     def eliminar_rol(self,id_rol):
-        db = sql.BaseDato("cinemar.db")
+        db = sql.DataBase("cinemar.db")
         db.update("rol","estado","0",f"id_rol = {id_rol}")
         db.close()
 
     def all_rol(self):
-        db = sql.BaseDato("cinemar.db")
+        db = sql.DataBase("cinemar.db")
         roles = db.select_all("rol","id_rol,nombre,descripcion")
         print("NRO     Nombre    Descripcion")
         for rol in roles:

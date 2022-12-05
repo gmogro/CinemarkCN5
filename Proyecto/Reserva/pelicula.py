@@ -8,6 +8,14 @@ class Pelicula:
         self.__fecha = fecha
         self.__estado = estado
     
+    @property
+    def Idpelicula(self):
+        return self.__id_pelicula
+
+    @Idpelicula.setter
+    def Idpelicula(self,pelicula):
+        self.__id_pelicula = pelicula
+        
     #getter y setter
     @property
     def Nombre(self):
