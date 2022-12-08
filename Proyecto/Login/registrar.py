@@ -77,4 +77,10 @@ class Registrar:
         self.__password = password
     
 
-    
+    def registrar(self):
+        self.__nombre = input("Ingrese el nombre del usuario: ")
+        self.__apellido = input("Ingrese el apellido del usuario: ")
+        self.__dni = input("Ingrese el DNI: ")
+        self.__email = input("Ingrese el email del usuario: ")
+        self.__password = input("Ingrese el password del usuario: ")
+        self.__idrol = 3

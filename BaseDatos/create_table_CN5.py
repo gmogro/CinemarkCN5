@@ -44,6 +44,7 @@ cnn.create_table("rol","id_rol INTEGER PRIMARY KEY AUTOINCREMENT,"+
 cnn.create_table("usuario","id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,"+
                           "nombre TEXT,"+
                           "apellido TEXT,"+
+                          "dni TEXT(11)," + 
                           "email TEXT,"+
                           "password TEXT,"+
                           "estado INTEGER(1) DEFAULT 1"
