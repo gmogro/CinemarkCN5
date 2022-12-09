@@ -36,7 +36,7 @@ class Sala(tk.Tk):
         # Pelicula
         pelicula_etiqueta = ttk.Label(form_frame, text='Pelicula :')
         pelicula_etiqueta.grid(row=1, column=0, sticky='W', padx=5, pady=10)
-        pelicula_entrada = ttk.Combobox(form_frame,values=peliculas)
+        pelicula_entrada = ttk.Combobox(form_frame, values = peliculas)
         pelicula_entrada.grid(row=1, column=1, sticky='EW', padx=5, pady=10)
 
         pelicula_entrada.bind("<<ComboboxSelected>>",lambda event: self.show(event))
